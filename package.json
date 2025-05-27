@@ -1,0 +1,24 @@
+{
+  "name": "lizard-server",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/uniqueusername/lizard-server#readme",
+  "bugs": {
+    "url": "https://github.com/uniqueusername/lizard-server/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uniqueusername/lizard-server.git"
+  },
+  "license": "MIT",
+  "author": "ary",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "socket.io": "^4.8.1"
+  }
+}

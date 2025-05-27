@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>kaylee portal</title>
+    </head>
+
+    <body>
+        <div style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
+            <button>feed kaylee</button>
+        </div>
+
+        <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
+        <script>
+            const socket = io()
+            const button = document.querySelector("button")
+
+            button.addEventListener("click", () => {
+              socket.emit("feed")
+              button.disabled = true
+              setTimeout(enableButton, 60000)
+            })
+
+            function enableButton() {
+              button.disabled = false
+            }
+        </script>
+    </body>
+</html>
