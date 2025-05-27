@@ -15,7 +15,10 @@ app.get("/", (req, res) => {
 })
 
 io.on("connection", (socket) => {
+  console.log("user connected")
+
   socket.on("feed", () => {
+    console.log("requesting food drop")
     io.emit("drop food")
   })
 })
